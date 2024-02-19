@@ -7,4 +7,12 @@ const userAge = Number(prompt('How old are you'));
 const pricePerKm = 0.21;
 let fullPrice = tripKm * pricePerKm;
 
+// subtract 20% of the full price if the user is a minor
+if (userAge < 18) {
+    fullPrice -= fullPrice / 100 * 20;
+} 
+// subtract 40% of the full price if the user is more than 65
+if (userAge >= 65) {
+    fullPrice -= fullPrice / 100 * 40;
+}
 console.log(fullPrice);
