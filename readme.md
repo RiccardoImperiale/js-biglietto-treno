@@ -13,7 +13,7 @@ The final price output must be put out in human form (with a maximum of two deci
 ## Steps
 
 - STEP 1: Ask the user Number of kilometers he want to travel and The age
-  - add two prompt to get kilometers and user's age
+  - add two prompt to get kilometers and age of the user
   - save them into variables
 - STEP 2: Calculate the price based on km
   - multiply user km by 0.21 € to get the full price of the kilometers   
