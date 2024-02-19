@@ -1,3 +1,5 @@
+const kidsDiscount = 20;
+const eldersDiscount = 40;
 
 // get kilometers and age of the user
 const tripKm = Number(prompt('How many kilometers do you like to travel?'));
@@ -9,11 +11,11 @@ let fullPrice = tripKm * pricePerKm;
 
 // subtract 20% of the full price if the user is a minor
 if (userAge < 18) {
-    fullPrice -= fullPrice / 100 * 20;
+    fullPrice -= fullPrice / 100 * kidsDiscount;
 }
 // subtract 40% of the full price if the user is more than 65
 if (userAge >= 65) {
-    fullPrice -= fullPrice / 100 * 40;
+    fullPrice -= fullPrice / 100 * eldersDiscount;
 }
 
 // ensure the final price has a maximum of two decimal places
