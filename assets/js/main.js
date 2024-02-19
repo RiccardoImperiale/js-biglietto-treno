@@ -1,3 +1,4 @@
+const pricePerKm = 0.21;
 const kidsDiscount = 20;
 const eldersDiscount = 40;
 
@@ -6,14 +7,13 @@ const tripKm = Number(prompt('How many kilometers do you like to travel?'));
 const userAge = Number(prompt('How old are you'));
 
 // multiply user km by 0.21 € to get the full price
-const pricePerKm = 0.21;
 let fullPrice = tripKm * pricePerKm;
 
-// subtract 20% of the full price if the user is a minor
+// subtract 20% from the full price if the user is a minor
 if (userAge < 18) {
     fullPrice -= fullPrice / 100 * kidsDiscount;
 }
-// subtract 40% of the full price if the user is more than 65
+// subtract 40% from the full price if the user is more than 65
 if (userAge >= 65) {
     fullPrice -= fullPrice / 100 * eldersDiscount;
 }
