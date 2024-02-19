@@ -10,9 +10,12 @@ let fullPrice = tripKm * pricePerKm;
 // subtract 20% of the full price if the user is a minor
 if (userAge < 18) {
     fullPrice -= fullPrice / 100 * 20;
-} 
+}
 // subtract 40% of the full price if the user is more than 65
 if (userAge >= 65) {
     fullPrice -= fullPrice / 100 * 40;
 }
-console.log(fullPrice);
+
+// ensure the final price has a maximum of two decimal places
+const finalPrice = fullPrice.toFixed(2);
+alert(`The final price is ${finalPrice}€`);
